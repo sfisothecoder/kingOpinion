@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Continue to the King Opinion survey and share your feedback.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="King Opinion | Share Your Opinion">
+    <meta property="og:description" content="Continue to the King Opinion survey and share your feedback.">
+
+    <title>King Opinion | Share Your Opinion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="survey-card" aria-labelledby="page-title">
+        <div class="brand" aria-label="King Opinion">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="img">
+              <path d="M8.5 5.5h11a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-11a3 3 0 0 1-3-3v-15a3 3 0 0 1 3-3Z" />
+              <path d="M11 5.5v-1h6v1M10.5 12.5l2 2 4-4M10.5 20h7" />
+            </svg>
+          </span>
+          <span>King Opinion</span>
+        </div>
+
+        <div class="icon-wrap" aria-hidden="true">
+          <svg class="survey-icon" viewBox="0 0 96 96" role="img">
+            <rect x="23" y="18" width="50" height="64" rx="9" />
+            <path d="M39 18v-4h18v4M35 37l5 5 10-11M35 59l5 5 10-11M57 38h7M57 60h7" />
+          </svg>
+        </div>
+
+        <h1 id="page-title">Your Opinion Matters</h1>
+        <p class="supporting-copy">
+          Take a moment to share your opinion by completing our short survey. Click below to continue.
+        </p>
+
+        <button class="cta-button" id="survey-button" type="button">
+          <span>Complete Survey</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M4 10h12M11 5l5 5-5 5" />
+          </svg>
+        </button>
+
+        <p class="redirect-note" id="redirect-note">
+          You will be redirected to the survey page to continue.
+        </p>
+        <p class="config-error" id="config-error" role="status" hidden>
+          The survey link is not available right now. Please try again later.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

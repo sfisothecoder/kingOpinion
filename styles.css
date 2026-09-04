@@ -1,0 +1,259 @@
+:root {
+  color-scheme: light;
+  --background: #f4f7fb;
+  --surface: #ffffff;
+  --text: #132238;
+  --muted: #5c6b7d;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-focus: #93b4ff;
+  --accent-soft: #eaf1ff;
+  --border: #e4eaf2;
+  --shadow: 0 24px 70px rgba(25, 47, 89, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(204, 221, 255, 0.55), transparent 42rem),
+    var(--background);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-shell {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+}
+
+.survey-card {
+  width: min(100%, 600px);
+  padding: 34px 58px 48px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid rgba(228, 234, 242, 0.9);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d3150;
+  font-size: 0.95rem;
+  font-weight: 750;
+  letter-spacing: 0.015em;
+}
+
+.brand-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: var(--primary);
+  background: var(--accent-soft);
+  border-radius: 9px;
+}
+
+.brand-mark svg {
+  width: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.icon-wrap {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  margin: 30px auto 23px;
+  place-items: center;
+  color: var(--primary);
+  background: var(--accent-soft);
+  border-radius: 26px;
+  transform: rotate(-2deg);
+}
+
+.survey-icon {
+  width: 66px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.supporting-copy {
+  max-width: 460px;
+  margin: 20px auto 30px;
+  color: var(--muted);
+  font-size: 1.075rem;
+  line-height: 1.65;
+}
+
+.cta-button {
+  width: 100%;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 15px 24px;
+  border: 0;
+  border-radius: 15px;
+  color: #ffffff;
+  background: var(--primary);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.24);
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.cta-button svg {
+  width: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  transition: transform 160ms ease;
+}
+
+.cta-button:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 13px 28px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.cta-button:hover svg {
+  transform: translateX(3px);
+}
+
+.cta-button:focus-visible {
+  outline: 4px solid var(--primary-focus);
+  outline-offset: 3px;
+}
+
+.cta-button:active {
+  box-shadow: 0 7px 17px rgba(37, 99, 235, 0.22);
+  transform: translateY(1px);
+}
+
+.cta-button:disabled {
+  color: #eef2f7;
+  background: #8793a3;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.redirect-note,
+.config-error {
+  margin: 16px 0 0;
+  color: #718096;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.config-error {
+  color: #9f2f2f;
+}
+
+@media (max-width: 560px) {
+  .page-shell {
+    align-items: center;
+    padding: 18px 14px;
+  }
+
+  .survey-card {
+    padding: 27px 22px 32px;
+    border-radius: 22px;
+  }
+
+  .icon-wrap {
+    width: 76px;
+    height: 76px;
+    margin: 25px auto 20px;
+    border-radius: 22px;
+  }
+
+  .survey-icon {
+    width: 57px;
+  }
+
+  h1 {
+    font-size: clamp(2.15rem, 12vw, 2.8rem);
+  }
+
+  .supporting-copy {
+    margin: 17px auto 26px;
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .cta-button {
+    min-height: 60px;
+  }
+}
+
+@media (max-height: 650px) {
+  .page-shell {
+    padding-block: 14px;
+  }
+
+  .survey-card {
+    padding-top: 23px;
+    padding-bottom: 26px;
+  }
+
+  .icon-wrap {
+    width: 68px;
+    height: 68px;
+    margin-top: 18px;
+    margin-bottom: 15px;
+  }
+
+  .survey-icon {
+    width: 50px;
+  }
+
+  .supporting-copy {
+    margin-top: 13px;
+    margin-bottom: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-button,
+  .cta-button svg {
+    transition: none;
+  }
+}
